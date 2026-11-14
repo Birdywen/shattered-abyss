@@ -1,0 +1,53 @@
+{
+  "name": "shattered-abyss",
+  "version": "1.0.0",
+  "description": "A 3D fantasy action adventure game in a collapsing world",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack:win": "electron-builder --win",
+    "pack:mac": "electron-builder --mac",
+    "dist": "electron-builder"
+  },
+  "keywords": [
+    "game",
+    "3d",
+    "threejs",
+    "action",
+    "fantasy",
+    "electron"
+  ],
+  "author": "CodeGuy",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^33.2.0"
+  },
+  "devDependencies": {
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.codeguy.shatteredabyss",
+    "productName": "Shattered Abyss",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "zip"
+      ]
+    },
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "category": "public.app-category.games"
+    },
+    "files": [
+      "main.js",
+      "index.html",
+      "package.json"
+    ]
+  }
+}
